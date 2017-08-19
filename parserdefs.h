@@ -11,6 +11,8 @@
 #define STAR 14
 #define SLASH 15
 #define CARET 16
+#define IF 17
+#define ELSE 18
 
 TokenName tokenNames[] = 
 {
@@ -32,7 +34,8 @@ const int tokenNameAmount = sizeof(tokenNames) / sizeof(tokenNames[0]);
 
 TokenName keywords[] = 
 {
-    "", 0
+    "IF", IF,
+    "ELSE", ELSE,
 };
 const int keywordAmount = sizeof(keywords) / sizeof(keywords[0]);
 
