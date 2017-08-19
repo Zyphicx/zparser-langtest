@@ -4,7 +4,7 @@ prog: binding*
 binding: IDENTIFIER EQUALS expr
 
 
-expr: bin_expr
+expr: bin_expr | if_expr
 
 bin_expr: term (PLUS | MINUS term)*
 
@@ -13,3 +13,6 @@ term: factor (STAR | SLASH factor)*
 factor: atom (CARET atom)*
 
 atom: NUMBER | IDENTIFIER | (L_PAREN expr R_PAREN)
+
+
+if_expr: IF expr (ELSE IF expr)- ELSE expr
